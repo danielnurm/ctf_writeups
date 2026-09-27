@@ -6,3 +6,5 @@ Solution: Changing the url parameter index.php?page=  to index.php?page=/etc/nat
 the hidden password. Server didn't require validation for requested files.
 
 Learned: Page parameters shouldn't directly be able to control which files load. Potential attacker could read files he wants to.
+
+Password -> ugXL95KQmUAJJj6bMezOlBNDyI9Imwkc
