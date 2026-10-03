@@ -14,7 +14,7 @@ GIF magic bytes in ASCII are GIF87a and GIF89a. Let's use one in our PHP file to
 By choosing the file to upload, we can then edit html in a similar way like level 12. ".jpg" -> ".php" and hit upload.
 
 Once our PHP file is in the system, we can execute command in the url ->
-...?x=cat%20/etc/natas_webpass/natas13 and extract our password.
+...?x=cat%20/etc/natas_webpass/natas14 and extract our password.
 
 Observations and learned: 
 - $_FILES has premade error scenarios which are represented by specific numbers. 
@@ -30,4 +30,4 @@ What could fix and help solve the vulnerability in the code:
 - Loading the image to a dir that is unusable by the client.
 - Replace the bad function with a more secure one.
 
-Password -> GIF87ag8ba0olAzaSJuyS4gnmbdVVigAICLG1k 
+Password -> GIF87aA0xXu2x9FW8rb8OSQ4ei6n5VBbLUz8h8
