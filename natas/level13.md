@@ -31,3 +31,4 @@ What could fix and help solve the vulnerability in the code:
 - Replace the bad function with a more secure one.
 
 Password -> GIF87aA0xXu2x9FW8rb8OSQ4ei6n5VBbLUz8h8
+From which "GIF87a" isnt part of the actual password.
