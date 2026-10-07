@@ -1,7 +1,11 @@
 # CTF Writeups
 
-# Overthewire Natas
+## OverTheWire Natas
 
-Writeups for overthewire natas levels using a Linux virtual machine
+Writeups for OverTheWire Natas levels 
+
+Levels solved using a mix of an Ubuntu VM, Burp Suite, Python,
+with some tasks done directly on macOS.
+
 
 Link: https://overthewire.org/wargames/natas/
