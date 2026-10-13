@@ -13,7 +13,7 @@ User input is treated as a single string.
 $ symbol isn't forbidden.
 With empty user input the site returns the entire dictionary. Because the input would be:
 passthru("grep -i "" dictionary.txt"); -> the whole dictionary.
-Let's use $() in our input. $(grep -i <numeral or alphabet here> /etc/natas_webpass/natas17)
+Let's use "$()" in our input. $(grep -i <numeral or alphabet here> /etc/natas_webpass/natas17)
 With x -> empty page
 with p -> whole dictionary
 From this we can conclude x is in the natas17 password.
@@ -39,7 +39,7 @@ checkable difference in the response, instead of comparing page length. Which wo
 been much more complex.
 
 # What could have been done to prevent this:
-- The input was wrapped in double quotes ("$key"), which blocked word-splitting
+- The input was in double quotes ("$key"), which blocked word-splitting
 (the input couldn't be broken into separate shell arguments). But $ itself was
 never disallowed, so $() command substitution still worked inside the quotes.
 - escapeshellarg() would force the entire input inside single quotes ('...'),
