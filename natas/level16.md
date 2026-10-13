@@ -1,6 +1,7 @@
 # Level 16
 
-# Challenge: Web form as a user input, filters certain characters. Input box for "Find words containing:"
+# Challenge:
+Web form as a user input, filters certain characters. Input box for "Find words containing:"
 Characters: [;|&`\'"] disallowed. We can see from the source code that it uses user given input as a key to find
 value from the dictionary.txt
 We need to get access into /etc/natas_webpass/natas17 for the password.
@@ -8,7 +9,8 @@ passthru("grep -i \"$key\" dictionary.txt");
 User input is treated as a single string.
 
 
-# Solution: $ symbol isn't forbidden.
+# Solution:
+$ symbol isn't forbidden.
 With empty user input the site returns the entire dictionary. Because the input would be:
 passthru("grep -i "" dictionary.txt"); -> the whole dictionary.
 Let's use $() in our input. $(grep -i <numeral or alphabet here> /etc/natas_webpass/natas17)
@@ -19,7 +21,7 @@ From this we can conclude x is in the natas17 password.
 We could do this manually, but again like in level 15 it is wiser to automate through
 python code. Let's edit the python code.
 
-#Problems I had:
+# Problems I had:
 - Didn't have a clear check system for whether the word resulted in a non-dict output,
 which symbolizes that the character was in the password.
 - Used -i in the input at first, which didn't differentiate between minor and capital letters.
@@ -43,4 +45,5 @@ never disallowed, so $() command substitution still worked inside the quotes.
 - escapeshellarg() would force the entire input inside single quotes ('...'),
 which would make a symbol like $ just a literal string instead of a shell command
 
+# Python code in github
 Password -> KLdAM3VZux8o6TbkbhuaG5KtYjI77tfx
