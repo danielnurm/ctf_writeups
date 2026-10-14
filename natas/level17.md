@@ -19,16 +19,20 @@ Let's implement this into the python code we made in level 15.
 SLEEP(1) resulted in: "fDGn2ACababeb" which is obviously too short first of all.
 So the 32 digit long took abit of testing with different times.
 - Using "SLEEP(0.5)" and "elapsed time > 0.3" resulted in 28 char password.
-- 
+When we run the python code, we can see when the "wrong" chars take around 0.05s which 
+doesn't activate SLEEP(0.5). When we have a correct one they jump to around 2s. 
+Which is well over 0.37s and we have a correct char.
 
 # Learnt and observations:
-- How response time can be used to exploit data
+- How response time can be used to commit SQLi
 - How important is to have a code structure which doesn't leak info through response times
 - SQL querys can be tricky to implement and from server perspective is to restrict attacker
 from doing SQLi's
 - Blind SQLi can be done even without visible output
 - Finally SLEEP(0.5) and response.elapsed.total_seconds()>0.37 worked. 
 Which gave fDGn2A6Gsc0BUp3bZw0RNXpg0PZt40op9, which is 1 character over 32.
+The 1 value over 32 means that the timing was a little off but close enough to get 32
+characters.
 
 # How the exploit could have been prevented:
 - Restrict SQLi with prepared statements.
