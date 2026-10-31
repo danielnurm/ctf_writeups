@@ -1,10 +1,8 @@
+__pycache__/
 .DS_Store
-.idea/
-python_natas_17/pythonProject17/
+.env
 .idea/
 .venv/
-venv/
-__pycache__/
 *.pyc
-.env
-.DS_Store
+python_natas_17/pythonProject17/
+venv/
