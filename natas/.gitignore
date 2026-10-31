@@ -2,3 +2,9 @@
 .idea/
 python_natas_17/pythonProject17/
 .idea/
+.venv/
+venv/
+__pycache__/
+*.pyc
+.env
+.DS_Store
